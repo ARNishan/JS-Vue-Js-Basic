@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Slider
+	</title>
+	<style type="text/css">
+		#demo{width: 960px;margin: 30px auto}
+		#demo .slider_item img{width: 100%;height: 300px}
+		.slider_container{position: relative;}
+		.slider_container .slider_item{position: absolute; opacity: 0; width: 100%;transition: all 1s;}
+		.slider_container .slider_item.active{opacity: 1}
+	</style>
+</head>
+<body>
+	<div id="demo">
+		<!-- <button id="windowopen">Print</button> -->
+		<div class="slider_container">
+			<div class="slider_item "> <img src="j/pexels-photo-949587.jpeg" alt=""> </div>
+			<div class="slider_item active"> <img src="j/background-image-3507320_960_720.jpg" alt=""> </div>
+			<div class="slider_item"> <img src="j/pexels-photo-1020315.jpeg" alt=""> </div>
+			<div class="slider_item"> <img src="j/images.jpg" alt=""> </div>
+		</div>
+		
+	</div>
+	<!-- <button id="slide">Click</button> -->
+	<div id="selectnumber">
+		<h1></h1>
+		
+		
+	</div>
+	<script type="text/javascript">
+		// document.querySelector("#demo h3").className= "Jihad Rahman";
+		// document.querySelector("#demo h3").setAttribute("href","www.gmail.com")
+		// var input = document.querySelector("#myinput").value;
+	// 	document.querySelector("#slide").addEventListener("click",function(){
+	// 	if(document.getElementsByClassName("slider_item")[0].classList.contains("active")){
+	// 		document.getElementsByClassName("slider_item")[1].classList.add("active");
+	// 		document.getElementsByClassName("slider_item")[0].classList.remove("active");
+
+
+	// 	}else if(document.getElementsByClassName("slider_item")[1].classList.contains("active")){
+	// 		document.getElementsByClassName("slider_item")[2].classList.add("active");
+	// 		document.getElementsByClassName("slider_item")[1].classList.remove("active");
+
+	// 	}else if(document.getElementsByClassName("slider_item")[2].classList.contains("active")){
+	// 		document.getElementsByClassName("slider_item")[3].classList.add("active");
+	// 		document.getElementsByClassName("slider_item")[2].classList.remove("active");
+
+	// 	}else if(document.getElementsByClassName("slider_item")[3].classList.contains("active")){
+	// 		document.getElementsByClassName("slider_item")[0].classList.add("active");
+	// 		document.getElementsByClassName("slider_item")[3].classList.remove("active");
+
+	// 	}
+	// });
+		setInterval(Change,2000);
+		function Change(){
+			if(document.getElementsByClassName("slider_item")[0].classList.contains("active")){
+			document.getElementsByClassName("slider_item")[1].classList.add("active");
+			document.getElementsByClassName("slider_item")[0].classList.remove("active");
+
+
+		}else if(document.getElementsByClassName("slider_item")[1].classList.contains("active")){
+			document.getElementsByClassName("slider_item")[2].classList.add("active");
+			document.getElementsByClassName("slider_item")[1].classList.remove("active");
+
+		}else if(document.getElementsByClassName("slider_item")[2].classList.contains("active")){
+			document.getElementsByClassName("slider_item")[3].classList.add("active");
+			document.getElementsByClassName("slider_item")[2].classList.remove("active");
+
+		}else if(document.getElementsByClassName("slider_item")[3].classList.contains("active")){
+			document.getElementsByClassName("slider_item")[0].classList.add("active");
+			document.getElementsByClassName("slider_item")[3].classList.remove("active");
+
+		}
+		}
+
+  
+	</script>
+
+</body>
+</html>

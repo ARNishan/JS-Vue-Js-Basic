@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Selct option
+	</title>
+</head>
+<body>
+	<div id="demo">
+		<select name="" id="country">
+			<option value="0">Select Countries</option>
+			<option value="1">Bangladesh</option>
+			<option value="2">USA</option>
+			<option value="3">India</option>
+		</select>
+		
+	</div>
+	<div id="selectnumber">
+		<h1></h1>
+		
+		
+	</div>
+	<script type="text/javascript">
+		// document.querySelector("#demo h3").className= "Jihad Rahman";
+		// document.querySelector("#demo h3").setAttribute("href","www.gmail.com")
+		document.querySelector("#country").addEventListener("change",function(){
+			var selectNumber = this.value;
+			if (selectNumber == 1) {
+				// alert("You have Selected Bangladesh");
+				document.querySelector("#selectnumber").innerHTML='<select id=""><option>Dhaka</option><option>Dinajpur</option><option>Noakhali</option><option>Comilla</option></select>';
+			}else if (selectNumber == 2) {
+				// alert("You have Selected USA");
+				document.querySelector("#selectnumber").innerHTML="You have Selected USA";
+			}else if (selectNumber == 3) {
+				// alert("You have Selected India");
+				document.querySelector("#selectnumber").innerHTML="You have Selected India";
+			}
+			else if (selectNumber == 0) {
+				// alert("You have Selected India");
+				document.querySelector("#selectnumber").innerHTML="";
+			}
+
+		})
+
+	</script>
+
+</body>
+</html>

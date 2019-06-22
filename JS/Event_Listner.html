@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Event Listener
+	</title>
+</head>
+<body>
+	<div id="demo">
+		<button onclick="showme()" ondblclick="hideme()">Click Me</button>
+		<h1></h1>
+		
+	</div>
+	<script type="text/javascript">
+		// document.querySelector("#demo h3").className= "Jihad Rahman";
+		// document.querySelector("#demo h3").setAttribute("href","www.gmail.com")
+	function showme(){
+		document.querySelector("#demo h1").innerHTML="Hello World";
+	}
+	function hideme(){
+		document.querySelector("#demo h1").innerHTML="";
+	}
+	</script>
+
+</body>
+</html>

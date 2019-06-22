@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Selct option
+	</title>
+</head>
+<body>
+	<div id="demo">
+		<input type="text" id="myinput" name="">
+		
+	</div>
+	<div id="selectnumber">
+		<h1></h1>
+		
+		
+	</div>
+	<script type="text/javascript">
+		// document.querySelector("#demo h3").className= "Jihad Rahman";
+		// document.querySelector("#demo h3").setAttribute("href","www.gmail.com")
+		// var input = document.querySelector("#myinput").value;
+		document.querySelector("#myinput").addEventListener("keyup",function(){
+			 var input = this.value;
+			 var mypass = "nishan";
+			 if(input == mypass){
+			 	document.querySelector("#selectnumber h1").innerHTML="<font color='green'>Password matched</font>"
+			 }else{
+			 	document.querySelector("#selectnumber h1").innerHTML="<font color='red'>Password not matched</font>"
+			 }
+		});
+
+  
+	</script>
+
+</body>
+</html>

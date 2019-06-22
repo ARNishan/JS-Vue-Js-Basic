@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Append / Prepand / Create tag / Create Class / Create Id 
+	</title>
+</head>
+<body>
+	<div id="demo">
+		<h1>Hello World</h1>
+		
+	</div>
+	<script type="text/javascript">
+		document.querySelector("#demo").append(document.createElement("h2"));
+		document.querySelector("#demo h2").innerHTML="Hello Nishan";
+		document.querySelector("#demo h2").append(" From Nstu");
+		document.querySelector("#demo").prepend(document.createElement("h3"));
+		document.querySelector("#demo h3").innerHTML="Hello Rahman";
+		document.querySelector("#demo h3").classList.add("container");
+		document.querySelector("#demo h3").classList.add("Nishan");
+		// document.querySelector("#demo h3").className= "Jihad Rahman";
+		// document.querySelector("#demo h3").setAttribute("href","www.gmail.com")
+	</script>
+
+</body>
+</html>
