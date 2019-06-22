@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<div id="app">
+				<!-- First -->
+				<h2>{{ message }}</h2>
+				<!-- Second -->
+				<h2 v-bind:class="className">{{ message }}</h2>
+				<!-- Third -->
+				<h3 v-if='show'>Third element</h3>
+				<!-- Fourth -->
+				<!-- v-show='visible' -->
+				<ol v-show='visible'>
+					<li v-for='list in lists'>{{list}}</li>
+				</ol>
+				<!-- Fifth -->
+				<ol>
+					<li v-for='list in lists1'>{{list.social}}</li>
+				</ol>
+				<!-- sixth -->
+				<input type="text" v-model='message' class="form-control">
+				<!-- seventh -->
+				<button v-on:click='enablelist'>Show</button>
+			</div>
+		</div>
+		<script>
+			new Vue ({
+				el : '#app', 
+				data: {
+					message : 'This is another vue js code',
+					className : 'alert alert-danger',
+					show : false,
+					lists : ['Nisahn','Rahman','Kamal','Jamal'],
+					lists1 : [
+					      {name:'Nishan'},
+					      {name:'Nishan'},
+					      {name:'Nishan'},
+					      {social:'Facebook'}
+					],
+					visible : false
+				},
+				methods:{
+					enablelist: function(){
+						this.visible=true;
+					}
+				}
+
+			});
+		</script>
+
+
+	</body>
+</html>

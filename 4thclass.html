@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<div id="app">
+				<br>
+				<!-- <h3 v-if="isActive">Speed of sound</h3>
+				<h3 v-else-if="isActive">Speed of Nature</h3>
+				<h3 v-else="isActive1">Speed of life</h3> -->
+				<h3 v-if="show == show1">Speed of sound</h3>
+				<div class="form-group col-lg-6">
+				  <input type="text" class="form-control" 
+				  v-model="text">
+				</div>
+				<div class="form-group col-lg-6">
+				  <button class="btn btn-success" v-on:click='find'>Show This</button>
+				</div>
+				<div class="form-group col-lg-6">
+				  <ol>
+				  	<li v-for='user in users' v-if='user.name == value'><h4>{{ user.name }}</h4></li>
+				  </ol>
+				</div>
+			</div>
+		</div>
+		<script>
+			new Vue ({
+				el : '#app', 
+				data: {
+					ClassName : 'alert alert-success',
+					isActive: false,
+					isActive1:true,
+					isMin: true,
+					show:'Something',
+					show1:'Somethin',
+					text:'',
+					value:'',
+					users:[
+					{name:'Nishan Rahman',email:'n@gmail.com'},
+					{name:'Akash Chowdhury',email:'a@gmail.com'},
+					],
+					
+					styleSection:{
+						color:'red',
+						border:'2px solid black'
+
+					}
+
+				},
+				methods:{
+					find:function(){
+						this.value = this.text
+
+					 }
+					
+				},
+				computed:{
+					// find:function(){
+					// 	this.value = this.text;
+
+					//  }
+				}
+
+			});
+		</script>
+
+
+	</body>
+</html>
