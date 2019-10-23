@@ -1,0 +1,135 @@
+/* CSS Document */
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+body,
+html { height: 100%;}
+.nav .open > a, 
+.nav .open > a:hover, 
+.nav .open > a:focus {}
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+#wrapper.toggled{
+	padding-left: 220px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    left: 220px;
+    width: 0;
+    height: 100%;
+    margin-left: -220px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #0E1A35;
+    transition: all 0.5s ease;
+
+}
+#sidebar-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 220px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    padding-top: 70px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -220px;
+}
+
+
+
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 220px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+        padding-top: 60px;
+}
+#content{
+    padding: 5px;
+    margin: 5px;
+}
+.table{
+    border:1px solid;
+    padding: 5px;
+}
+
+.sidebar-nav li {
+    position: relative; 
+    line-height: 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+.sidebar-nav li a{
+	display: block;
+	color: #489EBA;
+	text-decoration: none;
+	padding: 10px 15px 10px 30px;
+
+}
+.bulk{
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        color:#FFFFFF;
+        font-size: 25px;
+        display: block;
+        }
+
+
+
+.custom-btn{
+	margin-left: 15px;
+	color: white;
+	background-color: dimgray;
+}
+.custom-btn:hover{
+	margin-left: 15px;
+	color: #489EBA;
+	background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
