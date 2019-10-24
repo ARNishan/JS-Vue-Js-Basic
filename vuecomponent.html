@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Pass data from parent/vue to the component</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+		<div class="container">
+			
+			<div id="app">
+				  <sidebar :number='value'></sidebar>
+				  <button class="btn btn-success" @click='increment'>Add</button>
+				  {{value}}
+
+			</div>
+			<div id="components-demo">
+			  <button-counter></button-counter>
+			</div>
+			</div>
+		<script>
+			var value = {message:'Home'};
+				Vue.component('sidebar',{
+					template:`
+					<div class='col-lg-4'>
+						<ul>
+						    <li>{{message}}</li>
+							<li> About </li>
+							<li> Service </li>
+							<li> Nishan </li>
+						</ul>
+						<button class='btn btn-success'>{{ number }}</button>
+					</div>
+					`,
+					props:[
+					'number' 
+
+					]
+					//  data: function (){
+					// 	return value
+					// }
+				})
+			Vue.component('button-counter', {
+			  data: function () {
+			    return {
+			      count: 0
+			    }
+			  },
+			  template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+			})
+
+			new Vue ({
+				el : '#app',
+				data: {
+					
+					value:0
+					
+				},
+				methods:{
+					increment:function(){
+						this.value += 1;
+
+					}
+					
+					
+				},
+				// computed:{
+				// 	// find:function(){
+				// 	// 	this.value = this.text;
+
+				// 	//  }
+				// }
+
+			});
+		</script>
+
+
+</body>
+</html>
